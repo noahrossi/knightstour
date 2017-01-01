@@ -1,0 +1,361 @@
+Statistical profiling result from isolate-0x2eb4590-v8.log, (10970 ticks, 671 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1727   15.7%          /usr/bin/node
+      4    0.0%          /usr/lib/libc-2.24.so
+      1    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    458    4.2%    5.0%  LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    381    3.5%    4.1%  LazyCompile: *map native array.js:833:18
+    281    2.6%    3.0%  Builtin: ArgumentsAdaptorTrampoline
+    269    2.5%    2.9%  Stub: HasPropertyStub
+    198    1.8%    2.1%  LazyCompile: *<anonymous> /home/nrossi/code/knights-tour/index.js:28:28
+    175    1.6%    1.9%  Stub: CEntryStub {1}
+    160    1.5%    1.7%  Builtin: CallFunction_ReceiverIsAny
+    142    1.3%    1.5%  Stub: CEntryStub
+     63    0.6%    0.7%  Builtin: ArraySlice
+     56    0.5%    0.6%  KeyedLoadIC: A keyed load IC from the snapshot {1}
+     38    0.3%    0.4%  Stub: GrowArrayElementsStub
+     30    0.3%    0.3%  Stub: ArraySingleArgumentConstructorStub
+     28    0.3%    0.3%  Builtin: Call_ReceiverIsAny
+     25    0.2%    0.3%  Builtin: CompileLazy
+     16    0.1%    0.2%  KeyedLoadIC: A keyed load IC from the snapshot {2}
+      6    0.1%    0.1%  Stub: FastNewClosureStub
+      4    0.0%    0.0%  LazyCompile: *ArraySpeciesCreate native array.js:24:28
+      2    0.0%    0.0%  Stub: RecordWriteStub
+      2    0.0%    0.0%  Stub: FastArrayPushStub
+      2    0.0%    0.0%  LazyCompile: ~Socket.write net.js:656:34
+      2    0.0%    0.0%  KeyedLoadIC: A keyed load IC from the snapshot
+      1    0.0%    0.0%  Stub: ToLengthStub
+      1    0.0%    0.0%  Stub: GetPropertyStub
+      1    0.0%    0.0%  RegExp: ^\\d+$
+      1    0.0%    0.0%  LazyCompile: ~formatValue util.js:301:21
+      1    0.0%    0.0%  LazyCompile: ~Socket._writeGeneric net.js:665:42
+      1    0.0%    0.0%  LazyCompile: ~InnerArrayReduce native array.js:895:26
+      1    0.0%    0.0%  LazyCompile: *checkBoard /home/nrossi/code/knights-tour/index.js:13:20
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot
+
+ [C++]:
+   ticks  total  nonlib   name
+    595    5.4%    6.4%  v8::internal::JSObject::AddDataElement(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow)
+    368    3.4%    4.0%  v8::internal::Factory::NewJSArrayStorage(v8::internal::Handle<v8::internal::JSArray>, int, int, v8::internal::ArrayStorageAllocationMode)
+    325    3.0%    3.5%  v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+    316    2.9%    3.4%  v8::internal::Factory::NewJSArray(v8::internal::ElementsKind, v8::internal::PretenureFlag)
+    279    2.5%    3.0%  v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, bool*, v8::internal::LookupIterator::Configuration)
+    274    2.5%    3.0%  v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    274    2.5%    3.0%  v8::internal::FixedArray::set(int, v8::internal::Object*)
+    260    2.4%    2.8%  v8::internal::Object::AddDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow, v8::internal::Object::StoreFromKeyed)
+    235    2.1%    2.5%  v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+    231    2.1%    2.5%  v8::internal::Factory::NewJSObjectFromMap(v8::internal::Handle<v8::internal::Map>, v8::internal::PretenureFlag, v8::internal::Handle<v8::internal::AllocationSite>)
+    228    2.1%    2.5%  v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<true>(v8::internal::Map*, v8::internal::JSReceiver*)
+    222    2.0%    2.4%  v8::internal::Heap::InitializeJSObjectFromMap(v8::internal::JSObject*, v8::internal::FixedArray*, v8::internal::Map*)
+    177    1.6%    1.9%  v8::internal::JSObject::CreateDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::Object::ShouldThrow)
+    170    1.5%    1.8%  void v8::internal::LookupIterator::Start<true>()
+    167    1.5%    1.8%  v8::internal::JSObject::IsExtensible(v8::internal::Handle<v8::internal::JSObject>)
+    158    1.4%    1.7%  v8::internal::Factory::NewUninitializedFixedArray(int)
+    141    1.3%    1.5%  v8::internal::Heap::AllocateJSObjectFromMap(v8::internal::Map*, v8::internal::PretenureFlag, v8::internal::AllocationSite*)
+    137    1.2%    1.5%  v8::internal::JSObject::DefineOwnPropertyIgnoreAttributes(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow, v8::internal::JSObject::AccessorInfoHandling)
+    134    1.2%    1.5%  v8::internal::JSReceiver::CreateDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::Object::ShouldThrow)
+    134    1.2%    1.5%  v8::internal::JSObject::GetElementsAccessor()
+    128    1.2%    1.4%  v8::internal::Heap::Allocate(v8::internal::Map*, v8::internal::AllocationSpace, v8::internal::AllocationSite*)
+    111    1.0%    1.2%  void v8::internal::LookupIterator::NextInternal<true>(v8::internal::Map*, v8::internal::JSReceiver*)
+    104    0.9%    1.1%  v8::internal::ScavengeWeakObjectRetainer::RetainAs(v8::internal::Object*)
+     98    0.9%    1.1%  v8::internal::Heap::AllocateUninitializedFixedArray(int)
+     94    0.9%    1.0%  v8::internal::Heap::InitializeJSObjectBody(v8::internal::JSObject*, v8::internal::Map*, int)
+     92    0.8%    1.0%  v8::internal::JSObject::EnsureWritableFastElements(v8::internal::Handle<v8::internal::JSObject>)
+     81    0.7%    0.9%  v8::internal::Factory::NewJSArray(v8::internal::ElementsKind, int, int, v8::internal::ArrayStorageAllocationMode, v8::internal::PretenureFlag)
+     79    0.7%    0.9%  v8::internal::JSArray::WouldChangeReadOnlyLength(v8::internal::Handle<v8::internal::JSArray>, unsigned int)
+     76    0.7%    0.8%  v8::internal::Object::ToUint32(unsigned int*)
+     75    0.7%    0.8%  v8::internal::Heap::AllocateRawFixedArray(int, v8::internal::PretenureFlag)
+     68    0.6%    0.7%  v8::internal::LookupIterator::GetStoreTarget() const
+     64    0.6%    0.7%  v8::internal::Isolate::get_initial_js_array_map(v8::internal::ElementsKind)
+     41    0.4%    0.4%  v8::internal::IsMoreGeneralElementsKindTransition(v8::internal::ElementsKind, v8::internal::ElementsKind)
+     26    0.2%    0.3%  v8::internal::JSReceiver::GetPropertyAttributes(v8::internal::LookupIterator*)
+     23    0.2%    0.2%  node::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     19    0.2%    0.2%  v8::internal::Runtime_ArraySpeciesConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+     16    0.1%    0.2%  v8::internal::Object* v8::internal::VisitWeakList<v8::internal::JSFunction>(v8::internal::Heap*, v8::internal::Object*, v8::internal::WeakObjectRetainer*)
+     12    0.1%    0.1%  v8::internal::Map::TransitionElementsTo(v8::internal::Handle<v8::internal::Map>, v8::internal::ElementsKind)
+     11    0.1%    0.1%  v8::internal::JSObject::MigrateToMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+      9    0.1%    0.1%  v8::internal::Object::ArraySpeciesConstructor(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>)
+      8    0.1%    0.1%  v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+      7    0.1%    0.1%  void v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::PromotionMode)1, (v8::internal::LoggingAndProfiling)0>::EvacuateObject<(v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::PromotionMode)1, (v8::internal::LoggingAndProfiling)0>::ObjectContents)1, (v8::internal::AllocationAlignment)0>(v8::internal::Map*, v8::internal::HeapObject**, v8::internal::HeapObject*, int)
+      7    0.1%    0.1%  v8::internal::StoreBuffer::MoveEntriesToRememberedSet()
+      7    0.1%    0.1%  v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.0%    0.1%  v8::internal::Map::InstancesNeedRewriting(v8::internal::Map*, int, int, int, int*)
+      4    0.0%    0.0%  v8::internal::Object::GetProperty(v8::internal::LookupIterator*)
+      4    0.0%    0.0%  v8::internal::JSObject::GetElementsTransitionMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::ElementsKind)
+      4    0.0%    0.0%  v8::internal::HeapObject::synchronized_set_map(v8::internal::Map*)
+      3    0.0%    0.0%  void v8::internal::LookupIterator::NextInternal<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+      3    0.0%    0.0%  v8::internal::ScavengeVisitor::VisitPointer(v8::internal::Object**)
+      3    0.0%    0.0%  v8::internal::Object::ToString(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>)
+      3    0.0%    0.0%  v8::internal::NewSpace::UpdateAllocationInfo()
+      3    0.0%    0.0%  v8::internal::NewSpace::ResetAllocationInfo()
+      3    0.0%    0.0%  v8::internal::InnerPointerToCodeCache::GetCacheEntry(unsigned char*)
+      3    0.0%    0.0%  v8::internal::Factory::NumberToString(v8::internal::Handle<v8::internal::Object>, bool)
+      3    0.0%    0.0%  v8::internal::Factory::GetNumberStringCache(v8::internal::Handle<v8::internal::Object>)
+      3    0.0%    0.0%  _int_malloc
+      2    0.0%    0.0%  void node::StreamBase::JSMethod<node::StreamWrap, &(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  v8::internal::TypeFeedbackVector::New(v8::internal::Isolate*, v8::internal::Handle<v8::internal::TypeFeedbackMetadata>)
+      2    0.0%    0.0%  v8::internal::SemiSpace::FixPagesFlags(long, long)
+      2    0.0%    0.0%  v8::internal::ScavengeVisitor::VisitPointers(v8::internal::Object**, v8::internal::Object**)
+      2    0.0%    0.0%  v8::internal::Runtime::GetObjectProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, bool*)
+      2    0.0%    0.0%  v8::internal::Object::ConvertToName(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>)
+      2    0.0%    0.0%  v8::internal::Heap::AllocateFixedArrayWithFiller(int, v8::internal::PretenureFlag, v8::internal::Object*)
+      2    0.0%    0.0%  v8::internal::GCTracer::Start(v8::internal::GarbageCollector, char const*, char const*)
+      2    0.0%    0.0%  v8::internal::Deserializer::ReadData(v8::internal::Object**, v8::internal::Object**, int, unsigned char*)
+      2    0.0%    0.0%  v8::internal::Assembler::emit_mov(v8::internal::Register, v8::internal::Operand const&, int)
+      2    0.0%    0.0%  v8::base::TemplateHashMapImpl<v8::internal::ZoneAllocationPolicy>::Probe(void*, unsigned int) const
+      2    0.0%    0.0%  _init
+      1    0.0%    0.0%  void std::vector<v8::internal::compiler::BasicBlock*, v8::internal::zone_allocator<v8::internal::compiler::BasicBlock*> >::_M_emplace_back_aux<v8::internal::compiler::BasicBlock* const&>(v8::internal::compiler::BasicBlock* const&)
+      1    0.0%    0.0%  v8::internal::compiler::Schedule::SetBlockForNode(v8::internal::compiler::BasicBlock*, v8::internal::compiler::Node*)
+      1    0.0%    0.0%  v8::internal::compiler::RepresentationSelector::VisitNode(v8::internal::compiler::Node*, v8::internal::compiler::Truncation, v8::internal::compiler::SimplifiedLowering*)
+      1    0.0%    0.0%  v8::internal::compiler::CodeGenerator::AssembleMove(v8::internal::compiler::InstructionOperand*, v8::internal::compiler::InstructionOperand*)
+      1    0.0%    0.0%  v8::internal::Zone::DeleteAll()
+      1    0.0%    0.0%  v8::internal::VariableMap::Declare(v8::internal::Zone*, v8::internal::Scope*, v8::internal::AstRawString const*, v8::internal::VariableMode, v8::internal::Variable::Kind, v8::internal::InitializationFlag, v8::internal::MaybeAssignedFlag, bool*)
+      1    0.0%    0.0%  v8::internal::TextNode::MakeCaseIndependent(v8::internal::Isolate*, bool)
+      1    0.0%    0.0%  v8::internal::String::IndexOf(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>, int)
+      1    0.0%    0.0%  v8::internal::String::CalculateLineEnds(v8::internal::Handle<v8::internal::String>, bool)
+      1    0.0%    0.0%  v8::internal::StackFrameIterator::Advance()
+      1    0.0%    0.0%  v8::internal::SemiSpace::Swap(v8::internal::SemiSpace*, v8::internal::SemiSpace*)
+      1    0.0%    0.0%  v8::internal::SemiSpace::GrowTo(int)
+      1    0.0%    0.0%  v8::internal::Scope::ContextChainLength(v8::internal::Scope*) const
+      1    0.0%    0.0%  v8::internal::Scanner::ScanIdentifierOrKeyword()
+      1    0.0%    0.0%  v8::internal::Runtime_AllocateInTargetSpace(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime::SetObjectProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::LanguageMode)
+      1    0.0%    0.0%  v8::internal::RegExpAlternative::RegExpAlternative(v8::internal::ZoneList<v8::internal::RegExpTree*>*)
+      1    0.0%    0.0%  v8::internal::PropertyDescriptor::ToObject(v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::ValidateExpression(v8::internal::ExpressionClassifier<v8::internal::ParserBaseTraits<v8::internal::Parser> > const*, bool*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::ParseUnaryExpression(v8::internal::ExpressionClassifier<v8::internal::ParserBaseTraits<v8::internal::Parser> >*, bool*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::ParsePropertyDefinition(v8::internal::ParserBase<v8::internal::Parser>::ObjectLiteralCheckerBase*, bool, bool, v8::internal::MethodKind, bool*, bool*, v8::internal::ExpressionClassifier<v8::internal::ParserBaseTraits<v8::internal::Parser> >*, v8::internal::AstRawString const**, bool*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::ParseMemberExpressionContinuation(v8::internal::Expression*, bool*, v8::internal::ExpressionClassifier<v8::internal::ParserBaseTraits<v8::internal::Parser> >*, bool*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpression(bool, v8::internal::ExpressionClassifier<v8::internal::ParserBaseTraits<v8::internal::Parser> >*, bool*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::IsTrivialExpression()
+      1    0.0%    0.0%  v8::internal::Parser::ParseVariableDeclarations(v8::internal::ParserBase<v8::internal::Parser>::VariableDeclarationContext, v8::internal::Parser::DeclarationParsingResult*, v8::internal::ZoneList<v8::internal::AstRawString const*>*, bool*)
+      1    0.0%    0.0%  v8::internal::Parser::ParseFunctionLiteral(v8::internal::AstRawString const*, v8::internal::Scanner::Location, v8::internal::FunctionNameValidity, v8::internal::FunctionKind, int, v8::internal::FunctionLiteral::FunctionType, v8::internal::LanguageMode, bool*)
+      1    0.0%    0.0%  v8::internal::Parser::Internalize(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Script>, bool)
+      1    0.0%    0.0%  v8::internal::OptimizedFrame::type() const
+      1    0.0%    0.0%  v8::internal::Operand::Operand(v8::internal::Register, int)
+      1    0.0%    0.0%  v8::internal::NewSpace::AddFreshPage()
+      1    0.0%    0.0%  v8::internal::Map::GetOrCreatePrototypeInfo(v8::internal::Handle<v8::internal::Map>, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Map::CopyWithConstant(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::TransitionFlag)
+      1    0.0%    0.0%  v8::internal::MacroAssembler::Store(v8::internal::Operand const&, v8::internal::Register, v8::internal::Representation)
+      1    0.0%    0.0%  v8::internal::MacroAssembler::Movsd(v8::internal::Operand const&, v8::internal::XMMRegister)
+      1    0.0%    0.0%  v8::internal::LookupIterator::GetRootForNonJSReceiver(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, unsigned int)
+      1    0.0%    0.0%  v8::internal::LiveRange::AddUseInterval(v8::internal::LifetimePosition, v8::internal::LifetimePosition, v8::internal::Zone*)
+      1    0.0%    0.0%  v8::internal::LTemplateInstruction<0, 2, 0>::InputAt(int)
+      1    0.0%    0.0%  v8::internal::LChunk::AddInstruction(v8::internal::LInstruction*, v8::internal::HBasicBlock*)
+      1    0.0%    0.0%  v8::internal::LAllocator::AllocateRegisters()
+      1    0.0%    0.0%  v8::internal::JavaScriptFrame::GetFunctions(v8::internal::List<v8::internal::JSFunction*, v8::internal::FreeStoreAllocationPolicy>*) const
+      1    0.0%    0.0%  v8::internal::JSObject::MakePrototypesFast(v8::internal::Handle<v8::internal::Object>, v8::internal::WhereToStart, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::IncrementalMarking::ShouldActivateEvenWithoutIdleNotification()
+      1    0.0%    0.0%  v8::internal::HeapObjectIterator::Next()
+      1    0.0%    0.0%  v8::internal::HeapObject::IterateBody(v8::internal::InstanceType, int, v8::internal::ObjectVisitor*)
+      1    0.0%    0.0%  v8::internal::Heap::PromotedSpaceSizeOfObjects()
+      1    0.0%    0.0%  v8::internal::Heap::IteratePromotedObjectPointers(v8::internal::HeapObject*, unsigned char*, unsigned char*, bool, void (*)(v8::internal::HeapObject**, v8::internal::HeapObject*))
+      1    0.0%    0.0%  v8::internal::Heap::CollectGarbage(v8::internal::GarbageCollector, char const*, char const*, v8::GCCallbackFlags)
+      1    0.0%    0.0%  v8::internal::HValue::RegisterUse(int, v8::internal::HValue*)
+      1    0.0%    0.0%  v8::internal::HParameter::opcode() const
+      1    0.0%    0.0%  v8::internal::HInstruction::InsertAfter(v8::internal::HInstruction*)
+      1    0.0%    0.0%  v8::internal::HGlobalValueNumberingPhase::AnalyzeGraph()
+      1    0.0%    0.0%  v8::internal::GCTracer::Scope::~Scope()
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::RestoreContext()
+      1    0.0%    0.0%  v8::internal::FlexibleBodyVisitor<v8::internal::StaticScavengeVisitor<(v8::internal::PromotionMode)1>, v8::internal::FlexibleBodyDescriptor<16>, int>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  v8::internal::FixStaleLeftTrimmedHandlesVisitor::VisitPointers(v8::internal::Object**, v8::internal::Object**)
+      1    0.0%    0.0%  v8::internal::ExpressionClassifier<v8::internal::ParserBaseTraits<v8::internal::Parser> >::Accumulate(v8::internal::ExpressionClassifier<v8::internal::ParserBaseTraits<v8::internal::Parser> >*, unsigned int, bool)
+      1    0.0%    0.0%  v8::internal::DescriptorArray::Append(v8::internal::Descriptor*)
+      1    0.0%    0.0%  v8::internal::Code::CopyFrom(v8::internal::CodeDesc const&)
+      1    0.0%    0.0%  v8::internal::Assembler::jmp(v8::internal::Label*, v8::internal::Label::Distance)
+      1    0.0%    0.0%  v8::internal::ArrayBufferTracker::FreeDeadInNewSpace(v8::internal::Heap*)
+      1    0.0%    0.0%  v8::base::TemplateHashMapImpl<v8::base::DefaultAllocationPolicy>::Probe(void*, unsigned int) const
+      1    0.0%    0.0%  strchrnul
+      1    0.0%    0.0%  std::enable_if<std::__and_<std::is_move_constructible<v8::internal::Page>, std::is_move_assignable<v8::internal::Page> >::value, void>::type std::swap<v8::internal::Page>(v8::internal::Page&, v8::internal::Page&)
+      1    0.0%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      1    0.0%    0.0%  int v8::internal::FlexibleBodyVisitor<v8::internal::StaticScavengeVisitor<(v8::internal::PromotionMode)1>, v8::internal::FlexibleBodyDescriptor<8>, int>::VisitSpecialized<32>(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  _itoa_word
+      1    0.0%    0.0%  __mpn_extract_double
+      1    0.0%    0.0%  __mpn_cmp
+      1    0.0%    0.0%  __memcpy_avx_unaligned_erms
+      1    0.0%    0.0%  __memcmp_sse4_1
+      1    0.0%    0.0%  __GI___printf_fp_l
+      1    0.0%    0.0%  __GI__IO_vfprintf
+
+ [Summary]:
+   ticks  total  nonlib   name
+   2346   21.4%   25.4%  JavaScript
+   6221   56.7%   67.3%  C++
+    174    1.6%    1.9%  GC
+   1732   15.8%          Shared libraries
+    671    6.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   4022   51.8%   36.7%  v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+   3571   46.0%   32.6%  v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+     50    0.6%    0.5%  v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+     28    0.4%    0.3%  v8::internal::Runtime_ArraySpeciesConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+     26    0.3%    0.2%  v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+     26    0.3%    0.2%  v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      6    0.1%    0.1%  v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.1%    0.0%  v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.1%    0.0%  v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.1%    0.0%  v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    0.1%    0.0%  v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Builtin_ObjectGetOwnPropertyDescriptor(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_ToBooleanIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_StringIndexOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_RegExpInitializeAndCompile(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_RegExpExec(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_Interrupt(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_InstanceOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_BinaryOpIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_AllocateInTargetSpace(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Builtin_ObjectAssign(int, v8::internal::Object**, v8::internal::Isolate*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+   1727   15.7%  /usr/bin/node
+   1403   81.2%    v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+   1403  100.0%      LazyCompile: *<anonymous> /home/nrossi/code/knights-tour/index.js:28:28
+   1402   99.9%        LazyCompile: *map native array.js:833:18
+   1402  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+   1401   99.9%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    304   17.6%    v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    304  100.0%      LazyCompile: *map native array.js:833:18
+    304  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    304  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    304  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    671    6.1%  UNKNOWN
+
+    595    5.4%  v8::internal::JSObject::AddDataElement(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow)
+    595  100.0%    v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    595  100.0%      LazyCompile: *map native array.js:833:18
+    594   99.8%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    594  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    594  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    458    4.2%  LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    458  100.0%    LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    457   99.8%      LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    456   99.8%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    456  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    456  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    381    3.5%  LazyCompile: *map native array.js:833:18
+    379   99.5%    LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    379  100.0%      LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    379  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    379  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    379  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    368    3.4%  v8::internal::Factory::NewJSArrayStorage(v8::internal::Handle<v8::internal::JSArray>, int, int, v8::internal::ArrayStorageAllocationMode)
+    368  100.0%    v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+    368  100.0%      LazyCompile: *<anonymous> /home/nrossi/code/knights-tour/index.js:28:28
+    368  100.0%        LazyCompile: *map native array.js:833:18
+    368  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    368  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    325    3.0%  v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+    325  100.0%    v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+    325  100.0%      LazyCompile: *<anonymous> /home/nrossi/code/knights-tour/index.js:28:28
+    325  100.0%        LazyCompile: *map native array.js:833:18
+    325  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    325  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    316    2.9%  v8::internal::Factory::NewJSArray(v8::internal::ElementsKind, v8::internal::PretenureFlag)
+    316  100.0%    v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+    316  100.0%      LazyCompile: *<anonymous> /home/nrossi/code/knights-tour/index.js:28:28
+    316  100.0%        LazyCompile: *map native array.js:833:18
+    315   99.7%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    315  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    281    2.6%  Builtin: ArgumentsAdaptorTrampoline
+    233   82.9%    LazyCompile: *map native array.js:833:18
+    233  100.0%      LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    233  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    233  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    232   99.6%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+     47   16.7%    LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+     47  100.0%      LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+     47  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+     47  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+     47  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    279    2.5%  v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, bool*, v8::internal::LookupIterator::Configuration)
+    270   96.8%    v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    270  100.0%      LazyCompile: *map native array.js:833:18
+    270  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    270  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    270  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+      9    3.2%    v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      9  100.0%      LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+      9  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+      9  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+      9  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    274    2.5%  v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    274  100.0%    v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    273   99.6%      LazyCompile: *map native array.js:833:18
+    273  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    273  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    273  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    274    2.5%  v8::internal::FixedArray::set(int, v8::internal::Object*)
+    274  100.0%    v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    274  100.0%      LazyCompile: *map native array.js:833:18
+    274  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    274  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    274  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    269    2.5%  Stub: HasPropertyStub
+    269  100.0%    LazyCompile: *map native array.js:833:18
+    269  100.0%      LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    269  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    269  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    269  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    260    2.4%  v8::internal::Object::AddDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow, v8::internal::Object::StoreFromKeyed)
+    260  100.0%    v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    260  100.0%      LazyCompile: *map native array.js:833:18
+    259   99.6%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    259  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    259  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    235    2.1%  v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+    235  100.0%    v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+    235  100.0%      LazyCompile: *<anonymous> /home/nrossi/code/knights-tour/index.js:28:28
+    235  100.0%        LazyCompile: *map native array.js:833:18
+    235  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    235  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    231    2.1%  v8::internal::Factory::NewJSObjectFromMap(v8::internal::Handle<v8::internal::Map>, v8::internal::PretenureFlag, v8::internal::Handle<v8::internal::AllocationSite>)
+    231  100.0%    v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+    231  100.0%      LazyCompile: *<anonymous> /home/nrossi/code/knights-tour/index.js:28:28
+    230   99.6%        LazyCompile: *map native array.js:833:18
+    230  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    230  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    228    2.1%  v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<true>(v8::internal::Map*, v8::internal::JSReceiver*)
+    228  100.0%    v8::internal::Runtime_CreateDataProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+    228  100.0%      LazyCompile: *map native array.js:833:18
+    228  100.0%        LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    228  100.0%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    228  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
+    222    2.0%  v8::internal::Heap::InitializeJSObjectFromMap(v8::internal::JSObject*, v8::internal::FixedArray*, v8::internal::Map*)
+    222  100.0%    v8::internal::Builtin_ArraySlice(int, v8::internal::Object**, v8::internal::Isolate*)
+    222  100.0%      LazyCompile: *<anonymous> /home/nrossi/code/knights-tour/index.js:28:28
+    222  100.0%        LazyCompile: *map native array.js:833:18
+    221   99.5%          LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+    221  100.0%            LazyCompile: *move /home/nrossi/code/knights-tour/index.js:33:14
+
